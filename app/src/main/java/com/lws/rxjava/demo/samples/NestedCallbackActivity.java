@@ -52,8 +52,8 @@ public class NestedCallbackActivity extends AppCompatActivity {
                 .build();
         IGetRequest request = retrofit.create(IGetRequest.class);
 
-        mObservableRegister = request.register();
-        mObservableLogin = request.login();
+        mObservableRegister = request.getCall1();
+        mObservableLogin = request.getCall2();
 
         mObservableRegister.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

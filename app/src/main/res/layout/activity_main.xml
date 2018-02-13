@@ -48,7 +48,7 @@
         android:id="@+id/btn7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""/>
+        android:text="联合判断多个事件"/>
 
     <Button
         android:id="@+id/btn8"

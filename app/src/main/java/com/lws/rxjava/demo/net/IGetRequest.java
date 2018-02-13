@@ -13,11 +13,9 @@ public interface IGetRequest {
     @GET("ajax.php?a=fy&f=auto&t=auto&w=hi%20world")
     Observable<Translation> getCall();
 
-    //模拟注册
-    @GET("ajax.php?a=fy&f=auto&t=auto&w=hi%20register")
-    Observable<Translation> register();
+    @GET("ajax.php?a=fy&f=auto&t=auto&w=hi%20world")
+    Observable<Translation> getCall1();
 
-    //模拟登陆
-    @GET("ajax.php?a=fy&f=auto&t=auto&w=hi%20login")
-    Observable<Translation> login();
+    @GET("ajax.php?a=fy&f=auto&t=auto&w=hello%20China")
+    Observable<Translation> getCall2();
 }

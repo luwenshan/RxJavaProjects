@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.lws.rxjava.demo.samples.GetCacheActivity;
+import com.lws.rxjava.demo.samples.JoinJudgmentActivity;
 import com.lws.rxjava.demo.samples.MergeDataSourceActivity;
 import com.lws.rxjava.demo.samples.NestedCallbackActivity;
 import com.lws.rxjava.demo.samples.Polling1Activity;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, MergeDataSourceActivity.class));
                 break;
             case R.id.btn7:
-                startActivity(new Intent(MainActivity.this, GetCacheActivity.class));
+                startActivity(new Intent(MainActivity.this, JoinJudgmentActivity.class));
                 break;
             case R.id.btn8:
                 startActivity(new Intent(MainActivity.this, GetCacheActivity.class));
