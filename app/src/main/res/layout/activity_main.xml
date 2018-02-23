@@ -54,6 +54,12 @@
         android:id="@+id/btn8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""/>
+        android:text="功能防抖"/>
+
+    <Button
+        android:id="@+id/btn9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="优化联想搜索"/>
 
 </LinearLayout>

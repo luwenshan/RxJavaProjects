@@ -13,6 +13,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.reactivex.Observable;
 import io.reactivex.annotations.NonNull;
+import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function3;
 
@@ -31,6 +32,8 @@ public class JoinJudgmentActivity extends AppCompatActivity {
     @BindView(R.id.list)
     Button mList;
 
+    CompositeDisposable mDisposable;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +41,13 @@ public class JoinJudgmentActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         mList.setEnabled(false);
 
+        /*
+         * 为每个EditText设置被观察者，用于发送监听事件
+         * 说明：
+         * 1. 此处采用了RxBinding：RxTextView.textChanges(name) = 对对控件数据变更进行监听（功能类似TextWatcher）
+         * 2. 传入EditText控件，点击任1个EditText撰写时，都会发送数据事件 = Function3（）的返回值
+         * 3. 采用skip(1)原因：跳过 一开始EditText无任何输入时的空值
+         **/
         Observable<CharSequence> nameObservable = RxTextView.textChanges(mName).skip(1);
         Observable<CharSequence> ageObservable = RxTextView.textChanges(mAge).skip(1);
         Observable<CharSequence> jobObservable = RxTextView.textChanges(mJob).skip(1);

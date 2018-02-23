@@ -32,6 +32,10 @@
         </activity>
         <activity android:name=".samples.JoinJudgmentActivity">
         </activity>
+        <activity android:name=".samples.AntiShakeActivity">
+        </activity>
+        <activity android:name=".samples.AssociativeSearchActivity">
+        </activity>
     </application>
 
 </manifest>
